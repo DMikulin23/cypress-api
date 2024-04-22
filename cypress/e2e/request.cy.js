@@ -31,7 +31,7 @@ describe('Exercise 1', () => {
             expect(comments.some(comment => comment.email === 'Nikita@garfield.biz')).to.be.true;
         });
     });
-    it.only('All comments have id', () => {
+    it('All comments have id', () => {
         cy.request('GET', 'https://jsonplaceholder.typicode.com/comments').then((response) => {
             expect(response.status).to.equal(200); 
             response.body.forEach(comment => {
